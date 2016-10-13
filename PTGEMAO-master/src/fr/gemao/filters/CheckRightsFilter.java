@@ -103,6 +103,7 @@ public class CheckRightsFilter implements Filter {
 		chain.doFilter(req, res);
 
 	}
+	//initialisation servlet
 	public void init(FilterConfig fConfig) throws ServletException {
 	}
 
