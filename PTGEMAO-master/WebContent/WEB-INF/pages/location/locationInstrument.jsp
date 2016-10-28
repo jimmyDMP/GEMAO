@@ -9,86 +9,65 @@
 <c:import url="/inc/header.inc.jsp" />
 <c:import url="/inc/menu.inc.jsp" />
 
-	<h1>Location d'instrument</h1>
+    <%-- Location Interne --%>
+    <%-- Refonte totale de la page --%>
+	<h1>Location d'instrument interne</h1>
 
-	<c:choose >
-		<c:when test="${empty resultat}">
 			<form id="location" method="post" action="#">
 				<fieldset>
-					<legend>Instrument</legend>
-					<c:choose>
-						<c:when test="${!empty requestScope.listeCategorie}">
+					<legend>Informations Adhérent</legend>
 							<div>
-								<label for="categorie">Catégorie :</label>
-								<select name="categorie">
-									<c:forEach items="${requestScope.listeCategorie}" var="categorie">
-										<option value="<c:out value="${categorie['idCategorie']}" />"><c:out
-												value="${categorie['libelleCat']}" /></option>
+								<label for="Nom_Adherent">Nom :</label>
+								<input type="text" name="nom_adhérent">
+							</div>
+							
+							<div>
+								<label for="Prenom_Adherent">Prenom :</label>
+								<input type="text" name="Prenom_adhérent">
+							</div>
+							
+							<div>
+								<label for="Adresse_Adherent">Adresse :</label>
+								<input type="text" name="Adresse_adhérent">
+							</div>
+				</fieldset>			
+				<fieldset>
+					<legend>Instruments</legend>
+					
+					<c:choose>
+						<c:when test="${empty requestScope.listeInstument}">
+							<div>
+								<label for="Nom_instrument">Nom de l'instrument :</label>
+								<select name="Nom_instrument">
+									<c:forEach items="${requestScope.listeInstument}" var="instrument">
+										<option value="<c:out value="${instrument['idMateriel']}" />"><c:out
+												value="${instrument['typeMateriel']}" /></option>
 									</c:forEach>
 								</select>
 							</div>
 						</c:when>
-						<c:otherwise>
-							<div><span class='text-label'>Catégorie : </span><c:out value="${nomCategorie}" /></div>
-						</c:otherwise>
 					</c:choose>
 					
 					<c:choose>
-						<c:when test="${!empty requestScope.listeDesignation}">
+						<c:when test="${empty requestScope.listeInstument}">
 							<div>
-								<label for="designation">Désignation :</label>
-								<select name="designation">
-								<c:forEach items="${requestScope.listeDesignation}" var="designation">
-									<option value="<c:out value="${designation['idDesignation']}" />"><c:out
-											value="${designation['libelleDesignation']}" /></option>
-								</c:forEach>
+								<label for="Numero_instrument">n° de l'instrument :</label>
+								<select name="Numero_instrument">
+									<c:forEach items="${requestScope.listeInstument}" var="instrument">
+										<option value="<c:out value="${instrument['idMateriel']}" />"><c:out
+												value="${instrument['idMateriel']}" /></option>
+									</c:forEach>
 								</select>
 							</div>
 						</c:when>
-						<c:when test="${!empty requestScope.nomDesignation}">
-							<div><span class='text-label'>Désignation : </span><c:out value="${nomDesignation}" /></div>
-						</c:when>
 					</c:choose>
-					
+						
 				</fieldset>
-				<c:if test="${!empty requestScope.listeAdherent}">
-					<fieldset>
-						<legend>Adhérent</legend>
-						<div>
-							<label for="adherent">Nom :</label>
-							<select name="adherent">
-								<c:forEach items="${requestScope.listeAdherent}" var="adherent">
-									<option value="<c:out value="${adherent['idPersonne']}" />">
-										<c:out value="${adherent['nom']} ${adherent['prenom']}" />
-									</option>
-								</c:forEach>
-							</select>
-						</div>
-					</fieldset>
-					
-					<fieldset>
-						<legend>Dates</legend>
-						
-						<div>
-							<label for="datedeb">Date d'emprunt :</label>
-							<input class='datepicker' type="text" name="datedeb" required />
-						</div>
-						
-						<div>
-							<label for="datefin">Date de retour :</label>
-							<input class='datepicker' type="text" name="datefin" required />
-						</div>
-					</fieldset>
-				</c:if>
+				
 				<fieldset class='align-center no-border'>
-					<input type="submit" value="Valider" />
+					<input type="submit" class="btn" value="Louer" />
 				</fieldset>
-			</form>
-		</c:when>
-		<c:otherwise>
-			<p><c:out value="${resultat}"/></p>
-		</c:otherwise>
-	</c:choose>
 	
+			</form>
 
 <c:import url="/inc/footer.inc.jsp" />

@@ -84,7 +84,7 @@ public class CheckRightsFilter implements Filter {
 			
 			// Ajout vérification existence Module "Location"
 			if(nomModule.equals("Location")){
-				nomModule="Location";
+				nomModule = "Location";
 			}
 			
 			if(partiesModule.length == 2){
