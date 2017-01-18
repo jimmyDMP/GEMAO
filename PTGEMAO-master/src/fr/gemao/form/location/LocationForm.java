@@ -15,11 +15,14 @@ public class LocationForm {
 	private static final String CHAMP_ADHERENT = "adherent";
 	private static final String CHAMP_DATEDEBUT = "datedeb";
 	private static final String CHAMP_DATEFIN = "datefin";
+	private static final String CHAMP_MONTANT = "montant";
+	private static final String CHAMP_DATERETOUR = "dateretour";
 	
 	private String categorie;
 	private String designation;
 	private String adherent;
-	private String dateDebut, dateFin;
+	private String dateDebut, dateFin, dateRetour;
+	private String montant;
 	
 	private Map<String, String> erreurs = new HashMap<String, String>();
 
@@ -30,6 +33,8 @@ public class LocationForm {
 		adherent	= Form.getValeurChamp(request, CHAMP_ADHERENT);
 		dateDebut	= Form.getValeurChamp(request, CHAMP_DATEDEBUT);
 		dateFin		= Form.getValeurChamp(request, CHAMP_DATEFIN);
+		montant 	= Form.getValeurChamp(request, CHAMP_MONTANT);
+		dateRetour = Form.getValeurChamp(request, CHAMP_DATERETOUR);
 		
 		// TODO
 	}
@@ -79,6 +84,10 @@ public class LocationForm {
 
 	public void setDateFin(String dateFin) {
 		this.dateFin = dateFin;
+	}
+	
+	public String getDateRetour(){
+		return dateRetour;
 	}
 
 	public Map<String, String> getErreurs() {

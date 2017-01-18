@@ -28,13 +28,13 @@ public class Location implements Serializable{
 	private Etat etatFin;
 	
 	/** The date emprunt. */
-	private Date dateEmprunt;
+	private String dateEmprunt;
 	
 	/** The date retour. */
-	private Date dateRetour;
+	private String dateRetour;
 	
 	/** The duree. */
-	private Date dateEcheance;
+	private String dateEcheance;
 	
 	/** The montant. */
 	private float montant;
@@ -145,7 +145,7 @@ public class Location implements Serializable{
 	 * @param reparation the reparation
 	 */
 	public Location(Personne personne, Materiel materiel, Etat etatDebut,
-			Etat etatFin, Date dateEmprunt, Date dateRetour, Date dateEcheance,
+			Etat etatFin, String dateEmprunt, String dateRetour, String dateEcheance,
 			float montant, Reparation reparation) {
 		this.personne = personne;
 		this.materiel = materiel;
@@ -217,7 +217,7 @@ public class Location implements Serializable{
 	 *
 	 * @return the date emprunt
 	 */
-	public Date getDateEmprunt() {
+	public String getDateEmprunt() {
 		return dateEmprunt;
 	}
 
@@ -226,7 +226,7 @@ public class Location implements Serializable{
 	 *
 	 * @return the date retour
 	 */
-	public Date getDateRetour() {
+	public String getDateRetour() {
 		return dateRetour;
 	}
 
@@ -256,19 +256,19 @@ public class Location implements Serializable{
 		this.etatFin = etatFin;
 	}
 
-	public void setDateEmprunt(Date dateEmprunt) {
+	public void setDateEmprunt(String dateEmprunt) {
 		this.dateEmprunt = dateEmprunt;
 	}
 
-	public void setDateRetour(Date dateRetour) {
+	public void setDateRetour(String dateRetour) {
 		this.dateRetour = dateRetour;
 	}
 
-	public Date getDateEcheance() {
+	public String getDateEcheance() {
 		return dateEcheance;
 	}
 
-	public void setDateEcheance(Date dateEcheance) {
+	public void setDateEcheance(String dateEcheance) {
 		this.dateEcheance = dateEcheance;
 	}
 

@@ -54,8 +54,9 @@ public class JSPFile {
 		REP_LOCATION = "location/",
 		
 		//Utilisation de ce Module dans le menu
-		LOCATION_LOCATION = ROOT + REP_LOCATION + "locationInstrument.jsp",
+		LOCATION_ENREGISTRER = ROOT + REP_LOCATION + "locationInstrument.jsp",
 		LOCATION_RETOUR = ROOT + REP_LOCATION + "retourInstrument.jsp",
+		LOCATION_CONSULTER = ROOT + REP_LOCATION + "listerLocation.jsp",
 
 		// Module matériel
 		REP_MATERIEL = "materiel/",

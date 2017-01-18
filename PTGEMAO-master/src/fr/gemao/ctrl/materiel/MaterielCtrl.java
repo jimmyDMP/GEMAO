@@ -93,7 +93,7 @@ public class MaterielCtrl {
 		return materielDAO.get(idMateriel);
 	}
 	
-	public List<Materiel> recupererTousMateriels() {
+	public static List<Materiel> recupererTousMateriels() {
 		List<Materiel> listeMateriel = new ArrayList<Materiel>();
 		MaterielDAO materielDAO = new MaterielDAO(DAOFactory.getInstance());
 		

@@ -449,5 +449,9 @@ public class Adherent extends Personne implements Serializable{
 		}
 		return false;
 	}
+	
+	public String getPersonne(){
+		return this.getNom();
+	}
 
 }

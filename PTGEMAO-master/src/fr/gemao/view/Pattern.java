@@ -58,7 +58,8 @@ public class Pattern {
 		ADMINISTRATION_SUPPRIMER_PROFIL = MODULE_ADMINISTRATION + DROIT_ECRITURE + "/SupprimerProfil",
 
 		// Module location
-		LOCATION_LOCATION = MODULE_LOCATION + DROIT_ECRITURE + "/locationInstrument",
+		LOCATION_ENREGISTRER = MODULE_LOCATION + "/locationInstrument",
+		LOCATION_CONSULTER = MODULE_LOCATION + "/listerLocation",
 		LOCATION_RETOUR = MODULE_LOCATION + DROIT_ECRITURE + "/retourInstrument",
 
 		// Module matériel

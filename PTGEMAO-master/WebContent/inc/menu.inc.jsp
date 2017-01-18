@@ -154,16 +154,18 @@
 					</c:if>
 					<!-- Ajout ligne menu pour la location -->
 					<c:if test="${sessionScope.sessionObjectPersonnel.profil.recupererTypeDroit('Location') != 'Aucun' }">
-						<li class="icon icon-arrow-left"><a href="#">Location Interne</a>
+						<li class="icon icon-arrow-left"><a href="#">Location</a>
 							<div class="mp-level">
-								<h2>Location Interne</h2>
+								<h2>Location</h2>
 								<a class="mp-back" href="#">Retour</a>
 								<ul>
-									<li><a href="<c:url value="<%= Pattern.LOCATION_LOCATION %>"/>">Louer</a></li>
+									<li><a href="<c:url value="<%= Pattern.LOCATION_ENREGISTRER %>"/>">Enregistrer une location</a></li>
+									<li><a href="<c:url value="<%= Pattern.LOCATION_CONSULTER %>"/>">Consulter les locations</a></li>
 								</ul>
 							</div>
 						</li>
 					</c:if>
+					
 				</ul>
 			</div>
 		</nav>
